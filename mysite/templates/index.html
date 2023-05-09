@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sine Graph Generator</title>
+</head>
+<body>
+    <h1>Sine Graph Generator</h1>
+    <form method="POST" action="{% url 'generate_graph' %}">
+        {% csrf_token %}
+        <label for="start">Start:</label><br>
+        <input type="number" id="start" name="start" step="0.1"><br>
+        <label for="end">End:</label><br>
+        <input type="number" id="end" name="end" step="0.1"><br>
+        <label for="step">Step:</label><br>
+        <input type="number" id="step" name="step" step="0.1"><br><br>
+        <input type="submit" value="Generate Graph">
+    </form>
+</body>
+</html>
